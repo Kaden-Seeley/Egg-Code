@@ -2,6 +2,9 @@
 
 EggCode is a simple desktop timer designed to help you stay focused while coding. The interface is built with HTML, CSS, and JavaScript and runs as an Electron application.
 
+<img width="280" height="436" alt="image" src="https://github.com/user-attachments/assets/8dced153-8401-4e2a-b50a-b3cecbad4b4b" />
+
+
 ## Requirements
 
 To run the source code, you need:
