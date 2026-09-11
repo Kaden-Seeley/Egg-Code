@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>Egg Code</title>
+    </head>
+
+    <body>
+        <div class="game-name-holder">
+            <img class="game-name" src="assets/GameNameText.png" alt="Game Name Text">
+        </div>
+
+        <div class="main-game">
+            <div class="functionality-holder">
+                <h1 class="timer">
+                    00:00
+                </h1>
+
+                <button id="start-button" class="start-button">
+                    Start
+                </button>
+
+                <button id="settings-button" class="settings-button" aria-label="Open settings" title="Settings">
+                    &#9881;
+                </button>
+            </div>
+
+            <div class="pan-stage">
+                <svg class="steam steam-one" viewBox="0 0 24 76" aria-hidden="true">
+                    <path d="M12 75C2 65 22 57 12 47S2 29 14 21S18 7 12 1"></path>
+                </svg>
+                <svg class="steam steam-two" viewBox="0 0 24 76" aria-hidden="true">
+                    <path d="M12 75C22 65 2 57 12 47S22 29 10 21S6 7 12 1"></path>
+                </svg>
+                <svg class="steam steam-three" viewBox="0 0 24 76" aria-hidden="true">
+                    <path d="M12 75C4 64 20 57 11 46S4 30 14 20S17 7 12 1"></path>
+                </svg>
+                <img class="pan" src="assets/Pan.png" alt="Pan">
+            </div>
+        </div>
+
+        <!-- Focus Time Modal -->
+        <div id="focus-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Focus Time</h2>
+
+                <label for="focus-input">
+                    How long would you like to focus for?
+                </label>
+
+                <div class="input-holder">
+                    <input
+                        id="focus-input"
+                        type="number"
+                        min="1"
+                        step="1"
+                        placeholder="25"
+                    >
+
+                    <span>minutes</span>
+                </div>
+
+                <p id="error-message" class="error-message"></p>
+
+                <div class="modal-buttons">
+                    <button id="cancel-button" class="cancel-button">
+                        Cancel
+                    </button>
+
+                    <button id="confirm-button" class="confirm-button">
+                        Start
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content settings-content">
+                <h2>Settings</h2>
+
+                <label class="setting-option" for="sound-toggle">
+                    <input id="sound-toggle" type="checkbox" checked>
+                    <span>Timer complete sound</span>
+                </label>
+
+                <label class="setting-option" for="topmost-toggle">
+                    <input id="topmost-toggle" type="checkbox" checked>
+                    <span>Keep window on top</span>
+                </label>
+
+                <button id="close-settings-button" class="cancel-button close-settings-button">
+                    Done
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

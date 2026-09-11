@@ -1,0 +1,29 @@
+{
+  "name": "codetimertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.sharp.eggcodetimer",
+    "win": {
+      "icon": "assets/Logo.ico",
+      "target": "portable"
+    },
+    "portable": {
+      "artifactName": "EggCode.exe"
+    }
+  }
+}
