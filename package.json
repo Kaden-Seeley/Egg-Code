@@ -1,16 +1,19 @@
 {
-  "name": "codetimertest",
+  "name": "egg-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple focus timer for your desktop",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win portable",
+    "build": "electron-builder --linux AppImage deb",
+    "build:linux": "electron-builder --linux AppImage deb",
+    "build:installer": "electron-builder --linux AppImage && bash scripts/make-installer.sh",
+    "build:win": "electron-builder --win portable",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "type": "commonjs",
   "devDependencies": {
     "electron": "^44.2.0",
@@ -18,9 +21,24 @@
   },
   "build": {
     "appId": "com.sharp.eggcodetimer",
+    "productName": "EggCode",
     "win": {
       "icon": "assets/Logo.ico",
       "target": "portable"
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "assets/Egg_In_Pan.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "appImage": {
+      "artifactName": "EggCode-${version}-${arch}.AppImage"
+    },
+    "deb": {
+      "artifactName": "EggCode-${version}-${arch}.deb"
     },
     "portable": {
       "artifactName": "EggCode.exe"
